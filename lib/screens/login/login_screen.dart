@@ -3,13 +3,17 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:sizer/sizer.dart';
 import 'package:smartyyy/model/res/constant/app_assets.dart';
+import 'package:smartyyy/model/res/routes/routes_name.dart';
 import 'package:smartyyy/model/res/widgets/app_text.dart.dart';
 import 'package:smartyyy/model/res/widgets/app_text_field.dart';
 
 import '../../model/res/constant/app_colors.dart';
 import '../../model/res/constant/app_icons.dart';
+import '../../model/res/widgets/button_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -17,93 +21,136 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Stack(
-            children: [
-              Transform.translate(
-
-                  offset: Offset(100.w, -9.w),
-                  child: BackgroundImageContainer()),
-          Column(
-            children: [
-              SizedBox(height: 10.h,),
-              Padding(
-                padding:  EdgeInsets.only(
-                  top: 10.h,
-                  left: 5.h,
-                  right: 5.h,
-                  bottom: 2.h,
-                ),
-                child: Center(child: Image.asset(AppIcons.logo,fit: BoxFit.cover,height: 90,)),
+      backgroundColor: Colors.black,
+      body: Stack(children: [
+        Transform.translate(
+            offset: Offset(100.w, -9.w), child: BackgroundImageContainer()),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            SizedBox(
+              height: 7.h,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: 10.h,
+                left: 5.h,
+                right: 5.h,
+                bottom: 2.h,
               ),
-              SizedBox(height: 10.h,),
-              Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 3.w),
-                child: Container(
-                  height: 80.h,
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(3.h)
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Center(child: AppTextWidget(text: 'Welcome back, Jacson!',color: Colors.black,fontSize: 22,)),
-                      Center(child: AppTextWidget(text: 'Please enter your details',color:Colors.grey,fontSize: 12,)),
-                      SizedBox(height: 2.h,),
-                      AppTextWidget(text: 'Username',color:Colors.black,textAlign: TextAlign.start,fontSize: 12,),
-                      SizedBox(height: 0.5.h,),
-                      AppTextField(
+              child: Center(
+                  child: Image.asset(
+                AppIcons.logo,
+                fit: BoxFit.cover,
+                height: 90,
+              )),
+            ),
+            SizedBox(
+              height: 7.h,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 3.w),
+              child: Container(
+                //height: 50.h,
+
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(3.h),
+                      topRight: Radius.circular(3.h),
+                    )),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Center(
+                        child: AppTextWidget(
+                      text: 'Welcome back, Jacson!',
+                      color: Colors.black,
+                      fontSize: 22,
+                    )),
+                    Center(
+                        child: AppTextWidget(
+                      text: 'Please enter your details',
+                      color: Colors.grey,
+                      fontSize: 12,
+                    )),
+                    SizedBox(
+                      height: 2.h,
+                    ),
+                    AppTextWidget(
+                      text: 'Username',
+                      color: Colors.black,
+                      textAlign: TextAlign.start,
+                      fontSize: 12,
+                    ),
+                    SizedBox(
+                      height: 0.5.h,
+                    ),
+                    AppTextField(
+                      radius: 8,
+                      hintText: 'jasontodd1979@',
+                    ),
+                    AppTextWidget(
+                      text: 'Password',
+                      color: Colors.black,
+                      textAlign: TextAlign.start,
+                      fontSize: 12,
+                    ),
+                    SizedBox(
+                      height: 0.5.h,
+                    ),
+                    AppTextField(
+                      radius: 8,
+                      hintText: '*******',
+                    ),
+                    SizedBox(
+                      height: 2.h,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AppTextWidget(text: 'Remember me'),
+                        PrimaryTextButton(
+                          title: 'Forgot password',
+                          fontSize: 12,
+                          onPressed: () {},
+                          textColor: AppColors.purplrColor,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 2.h,
+                    ),
+                    Center(
+                      child: ButtonWidget(
                         radius: 8,
-                        hintText: 'jasontodd1979@',),
-                      AppTextWidget(text: 'Password',color:Colors.black,textAlign: TextAlign.start,fontSize: 12,),
-                      SizedBox(height: 0.5.h,),
-                      AppTextField(
-                        radius: 8,
-                        hintText: '*******',),
-                      SizedBox(
-                        height: 2.h,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          AppTextWidget(text: 'Remember me'),
-                          PrimaryTextButton(
-                            title: 'Forgot password',
-                            fontSize: 12,
-                            onPressed: () {},
-                            textColor: AppColors.purplrColor,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 2.h,
-                      ),
-                      PrimaryButton(
-                        onTap: () {},
-                        borderRadius: 8,
-                        fontSize: 14,
-                        height: 48,
-                        width: 326,
                         text: 'Login',
-                        textColor: Colors.white,
-                        bgColor: AppColors.loginButtonColor,
+                        onClicked: () {
+                          Get.toNamed(RoutesName.mainScreen);
+                        },
+                        width: 80.w,
+                        height: 5.h,
+                        fontWeight: FontWeight.normal,
                       ),
-                      SizedBox(
-                        height: 2.h,
-                      ),
-                      Center(child: AppTextWidget(text: 'Copyright©2024 . All rights reserved.',color: Colors.grey,textAlign: TextAlign.center,))
-                    ],
-                  ),
+                    ),
+                    SizedBox(
+                      height: 2.h,
+                    ),
+                    Center(
+                        child: AppTextWidget(
+                      text: 'Copyright©2024 . All rights reserved.',
+                      color: Colors.grey,
+                      textAlign: TextAlign.center,
+                    )),
+                  ],
                 ),
-              )
-            ],
-          )
-        ]),
-      ),
+              ),
+            )
+          ],
+        )
+      ]),
     );
   }
 }
@@ -139,13 +186,14 @@ class CustomRichText extends StatelessWidget {
     );
   }
 }
+
 class PrimaryTextButton extends StatelessWidget {
   const PrimaryTextButton(
       {super.key,
-        required this.onPressed,
-        required this.title,
-        required this.fontSize,
-        required this.textColor});
+      required this.onPressed,
+      required this.title,
+      required this.fontSize,
+      required this.textColor});
   final Function() onPressed;
   final String title;
   final double fontSize;
@@ -180,15 +228,15 @@ class PrimaryButton extends StatefulWidget {
   final Color? textColor, bgColor;
   const PrimaryButton(
       {Key? key,
-        required this.onTap,
-        required this.text,
-        this.width,
-        this.height,
-        this.borderRadius,
-        this.fontSize,
-        required this.textColor,
-        required this.bgColor,
-        this.iconData})
+      required this.onTap,
+      required this.text,
+      this.width,
+      this.height,
+      this.borderRadius,
+      this.fontSize,
+      required this.textColor,
+      required this.bgColor,
+      this.iconData})
       : super(key: key);
 
   @override
@@ -206,8 +254,8 @@ class _PrimaryButtonState extends State<PrimaryButton>
       vsync: this,
       duration: _animationDuration,
     )..addListener(() {
-      setState(() {});
-    });
+        setState(() {});
+      });
     super.initState();
   }
 
@@ -275,7 +323,6 @@ class _PrimaryButtonState extends State<PrimaryButton>
   }
 }
 
-
 class BackgroundImageContainer extends StatelessWidget {
   const BackgroundImageContainer({
     super.key,
@@ -284,7 +331,7 @@ class BackgroundImageContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform(
-      transform: Matrix4.rotationY(pi),  // Flip the image horizontally
+      transform: Matrix4.rotationY(pi), // Flip the image horizontally
       child: Container(
         height: 80.h,
         width: 100.w,
@@ -294,11 +341,7 @@ class BackgroundImageContainer extends StatelessWidget {
                   AppAssets.boy,
                 ),
                 fit: BoxFit.cover)),
-
       ),
     );
   }
 }
-
-
-
