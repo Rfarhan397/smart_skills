@@ -7,6 +7,7 @@ class ButtonWidget extends StatelessWidget {
   final VoidCallback onClicked;
   final double width, height;
   final FontWeight fontWeight;
+  final double fontSize;
   final double radius;
   final bool loader, oneColor;
   final Color textColor, borderColor, backgroundColor;
@@ -24,7 +25,7 @@ class ButtonWidget extends StatelessWidget {
     this.textColor = Colors.white,
     this.borderColor = AppColors.purplrColor,
     this.backgroundColor = AppColors.purplrColor,
-    this.isShadow = true, required this.fontWeight,
+    this.isShadow = true, required this.fontWeight,  this.fontSize = 12.0,
   }) : super(key: key);
 
   @override
@@ -43,18 +44,18 @@ class ButtonWidget extends StatelessWidget {
             end: Alignment.bottomRight,
             stops: [0.0, 1.0],
             colors: [
-              oneColor ? backgroundColor : (AppColors.loginButtonColor),
-              oneColor ? backgroundColor : (AppColors.loginButtonColor),
+              oneColor ? backgroundColor : (AppColors.appPrimaryColor),
+              oneColor ? backgroundColor : (AppColors.appPrimaryColor),
             ],
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: isShadow ? 2 : 0,
-              blurRadius: isShadow ? 5 : 0,
-              offset: Offset(isShadow ? 0 : 0, isShadow ? 3 : 0),
-            ),
-          ],
+          // boxShadow: [
+          //   BoxShadow(
+          //     color: Colors.black.withOpacity(0.2),
+          //     spreadRadius: isShadow ? 2 : 0,
+          //     blurRadius: isShadow ? 5 : 0,
+          //     offset: Offset(isShadow ? 0 : 0, isShadow ? 3 : 0),
+          //   ),
+          // ],
         ),
         child: loader
             ? const CircularProgressIndicator(
@@ -62,8 +63,8 @@ class ButtonWidget extends StatelessWidget {
         )
             : Center(
           child: AppTextWidget(
-            text: text,
-            fontSize: 12.0,
+            text: text ,
+            fontSize: fontSize,
             color: textColor,
             fontWeight: fontWeight,
           ),

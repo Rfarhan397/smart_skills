@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:device_preview/device_preview.dart';
 import 'model/provider/bottomNavigation/bottom_navigation.dart';
+import 'model/provider/listOfRooms/listofrooms_provider.dart';
 import 'model/res/routes/routes.dart';
 import 'model/res/routes/routes_name.dart';
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
             providers: [
               ChangeNotifierProvider(create: (_) => BottomNavProvider()),
               ChangeNotifierProvider(create: (_) => DaySelectorProvider()),
+              ChangeNotifierProvider(create: (_) => SelectionProvider()),
             ],
             child: GetMaterialApp(
               debugShowCheckedModeBanner: false,

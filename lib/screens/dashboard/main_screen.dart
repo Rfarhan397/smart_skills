@@ -5,14 +5,16 @@ import 'package:smartyyy/model/res/constant/app_colors.dart';
 
 import '../../model/provider/bottomNavigation/bottom_navigation.dart';
 import '../../model/res/widgets/customNav.dart';
+import '../ListOfRooms/ListOfRooms.dart';
+import '../RoomNotice/RoomNotice.dart';
 import 'dashboard_screen.dart';
 
 class MainScreen extends StatelessWidget {
    MainScreen({super.key});
   final List<Widget> _screens = [
     DashboardScreen(),
-    DashboardScreen(),
-    DashboardScreen(),
+    ListOfRooms(),
+    RoomNotice(),
     DashboardScreen(),
 
   ];

@@ -65,40 +65,7 @@ class CustomProgressChart extends StatelessWidget {
                 SizedBox(width: 1.w),
                 LegendItem(color: Colors.deepPurpleAccent, text: 'Bookings Report'),
               ],
-            )
-            // Expanded(
-            //   child: LineChart(
-            //     LineChartData(
-            //       maxY: 140,
-            //       minY: 0,
-            //       lineBarsData: [
-            //         LineChartBarData(
-            //           spots: getLineSpotsProblems(),
-            //           isCurved: true,
-            //           color: Colors.red,
-            //           barWidth: 3,
-            //           belowBarData: BarAreaData(
-            //             show: true,
-            //             color: Colors.red.withOpacity(0.3),
-            //           ),
-            //         ),
-            //         LineChartBarData(
-            //           spots: getLineSpotsServices(),
-            //           isCurved: true,
-            //           color: Colors.orange,
-            //           barWidth: 3,
-            //           belowBarData: BarAreaData(
-            //             show: true,
-            //             color: Colors.orange.withOpacity(0.3),
-            //           ),
-            //         ),
-            //       ],
-            //       titlesData: FlTitlesData(show: false),
-            //       gridData: FlGridData(show: false),
-            //       borderData: FlBorderData(show: false),
-            //     ),
-            //   ),
-            // ),
+            ),
           ],
         ),
       ),

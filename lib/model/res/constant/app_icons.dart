@@ -7,6 +7,9 @@ class AppIcons{
   static const listOfRoom_icon = "assets/icons/listOfRoom_icon.webp";
   static const roomNotice = "assets/icons/room_notice_icon.webp";
   static const lastIcon = "assets/icons/last_icon.webp";
+  static const search = "assets/icons/search.webp";
+  static const download = "assets/icons/download.webp";
+  static const menu = "assets/icons/menu.webp";
 
 
 }
