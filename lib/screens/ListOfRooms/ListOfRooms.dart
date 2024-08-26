@@ -116,6 +116,7 @@ class ListOfRooms extends StatelessWidget {
                     ),
                     SizedBox(height: 1.h),
                     Expanded(
+                      flex: 1,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Padding(

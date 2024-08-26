@@ -24,7 +24,7 @@ class DashboardScreen extends StatelessWidget {
               ProfileHeader(),
               SizedBox(height: 1.h,),
               Container(
-                height: 71.h,
+                height: 68.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
                   color: Color(0xffE9E9EE),
@@ -83,7 +83,7 @@ class DashboardScreen extends StatelessWidget {
                     padding:  EdgeInsets.all(1.h),
                     child: Container(
                       padding: EdgeInsets.all(10),
-                      height: 53.h,
+                      height: 50.h,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20)

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:smartyyy/model/res/constant/app_colors.dart';
+import 'package:smartyyy/screens/coming_soon/coming_soon.dart';
 
 import '../../model/provider/bottomNavigation/bottom_navigation.dart';
 import '../../model/res/widgets/customNav.dart';
@@ -15,7 +16,7 @@ class MainScreen extends StatelessWidget {
     DashboardScreen(),
     ListOfRooms(),
     RoomNotice(),
-    DashboardScreen(),
+    ComingSoon(),
 
   ];
   @override
