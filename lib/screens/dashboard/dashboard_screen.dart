@@ -44,6 +44,7 @@ class DashboardScreen extends StatelessWidget {
                               context: context,
                               initialDate: context.read<DateProvider>().selectedDate,
                               firstDate: DateTime(2000),
+                              keyboardType: TextInputType.numberWithOptions(),
                               lastDate: DateTime(2101),
                             );
                             if (picked != null) {
