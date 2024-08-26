@@ -56,15 +56,13 @@ class RoomNotice extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                               color: Colors.black,
                             ),
-                            SizedBox(
-                              width: 10.w,
-                            ),
+                            Spacer(),
                             Row(
                               children: [
                                 // Search Button
                                 Container(
                                   height: 5.h,
-                                  width: 10.w,
+                                  width: 11.w,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     border: Border.all(
@@ -84,7 +82,7 @@ class RoomNotice extends StatelessWidget {
                                 ),
                                 Container(
                                   height: 5.h,
-                                  width: 10.w,
+                                  width: 11.w,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     border: Border.all(
