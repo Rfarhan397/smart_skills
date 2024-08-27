@@ -53,15 +53,13 @@ class ListOfRooms extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                               color: Colors.black,
                             ),
-                            SizedBox(
-                              width: 10.w,
-                            ),
+                            Spacer(),
                             Row(
                               children: [
                                 // Search Button
                                 Container(
                                   height: 5.h,
-                                  width: 10.w,
+                                  width: 11.w,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     border: Border.all(
@@ -81,7 +79,7 @@ class ListOfRooms extends StatelessWidget {
                                 ),
                                 Container(
                                   height: 5.h,
-                                  width: 10.w,
+                                  width: 11.w,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     border: Border.all(
@@ -118,6 +116,7 @@ class ListOfRooms extends StatelessWidget {
                     ),
                     SizedBox(height: 1.h),
                     Expanded(
+                      flex: 1,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Padding(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:smartyyy/model/res/constant/app_assets.dart';
 import 'package:smartyyy/model/res/constant/app_colors.dart';
 import 'package:smartyyy/model/res/constant/app_icons.dart';
 import 'package:smartyyy/model/res/widgets/app_text.dart.dart';
@@ -10,12 +11,13 @@ class ProfileHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 12.h,
-      padding: EdgeInsets.all(16.0),
+      height: 10.h,
+      padding: EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
-AppColors.appBlackColor,
+          Color(0xff202024),
           Color(0xff1F1F23),
+          Color(0xff27272B),
         ]),
         borderRadius: BorderRadius.circular(30), // Rounded corners
       ),
@@ -27,7 +29,7 @@ AppColors.appBlackColor,
               // Profile Picture
               CircleAvatar(
                 radius: 28.0,
-                backgroundImage: AssetImage('assets/images/profile.jpg'),
+                backgroundImage: AssetImage(AppAssets.jason),
               ),
               SizedBox(width: 12.0),
               // Username and Role
@@ -85,6 +87,3 @@ AppColors.appBlackColor,
     );
   }
 }
-
-void main() =>
-    runApp(MaterialApp(home: Scaffold(body: Center(child: ProfileHeader()))));

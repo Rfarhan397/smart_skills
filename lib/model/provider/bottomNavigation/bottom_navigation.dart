@@ -11,8 +11,11 @@ class BottomNavProvider with ChangeNotifier {
   }
 }
 
+
 class DaySelectorProvider with ChangeNotifier {
-  int _selectedIndex = 1;
+  int _selectedIndex;
+
+  DaySelectorProvider({required int initialIndex}) : _selectedIndex = initialIndex;
 
   int get selectedIndex => _selectedIndex;
 
@@ -21,3 +24,4 @@ class DaySelectorProvider with ChangeNotifier {
     notifyListeners();
   }
 }
+
